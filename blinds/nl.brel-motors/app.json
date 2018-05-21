@@ -1,56 +1,58 @@
 {
   "id": "nl.brel-motors",
   "name": {
-    "en": "Brel Motors",
-    "nl": "Brel Motors"
+    "en": "Forest-TCS",
+    "nl": "Forest-TCS"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "sdk": 2,
   "compatibility": ">=1.5",
   "category": "appliances",
   "description": {
-    "en": "Let Homey control your Brel roller blinds",
-    "nl": "Laat Homey je Brel rolgordijnen aansturen."
+    "en": "Let Homey control your Forest-TCS curtains",
+    "nl": "Laat Homey je Forest-TCS gordijnen aansturen."
   },
   "images": {
-    "large": "./assets/images/large.png",
-    "small": "./assets/images/small.png"
+    "large": "./assets/images/forest-large.png",
+    "small": "./assets/images/forest-small.png"
   },
   "author": {
-    "name": "Athom B.V.",
+    "name": "Athom B.V./JPe",
     "email": "info@athom.com"
   },
   "signals": {
     "433": {
       "brel": {
         "sof": [
-          100,
-          100
+          6270
         ],
+		"eof": [
+			7290
+		],	
         "words": [
           [
-            100,
-            100
+            1455,
+            740
           ],
           [
-            100,
-            100
+            740,
+            1455
           ]
         ],
-        "interval": 100,
+        "interval": 10000,
         "repetitions": 10,
         "sensitivity": 0.5,
-        "minimalLength": 39,
-        "maximalLength": 39
-      }
+        "minimalLength": 24,
+        "maximalLength": 24
+		      }
     }
   },
   "drivers": [
     {
       "id": "MLE-25",
       "name": {
-        "en": "Brel Remote",
-        "nl": "Brel Afstandsbediening"
+        "en": "Forest-TCS Remote",
+        "nl": "Gordijnen-"
       },
       "icon": "",
       "class": "windowcoverings",
@@ -58,8 +60,8 @@
         "windowcoverings_state"
       ],
       "images": {
-        "large": "./drivers/MLE-25/assets/images/large.jpg",
-        "small": "./drivers/MLE-25/assets/images/small.jpg"
+        "large": "./drivers/MLE-25/assets/images/forest-large.jpg",
+        "small": "./drivers/MLE-25/assets/images/forest-small.jpg"
       },
       "rf": {
         "signal": "brel"
@@ -89,4 +91,4 @@
   "permissions": [
     "homey:wireless:433"
   ]
-}
+} 
