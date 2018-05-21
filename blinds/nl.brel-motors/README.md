@@ -1,3 +1,9 @@
+
+Forked "Brel Motors" to use as example and made changes to manage to 
+control Forest-TCS curtain-rails (older rails before Forest-Shuttle)
+
+
+
 #Brel Motors
 
 Adds support for remote controlled motors for roller blinds produced by Brel Motors
